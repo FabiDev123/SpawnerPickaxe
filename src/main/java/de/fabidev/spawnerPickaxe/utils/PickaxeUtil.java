@@ -29,6 +29,11 @@ public class PickaxeUtil {
 
         isPick.addUnsafeEnchantment(Enchantment.SILK_TOUCH, 10);
 
+
+
+
+
+
     }
 
     public ItemStack getIsPick(){
