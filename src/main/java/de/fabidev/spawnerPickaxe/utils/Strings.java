@@ -12,6 +12,7 @@ public class Strings {
 
 
     public static final String permissionXP = "xpbottles.command";
+    public static final String permissionPickaxe = "pickaxe.command";
 
 
 
