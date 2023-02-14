@@ -1,5 +1,6 @@
 package de.fabidev.spawnerPickaxe;
 
+import de.fabidev.spawnerPickaxe.commands.XPBottlesCommand;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class SpawnerPickaxe extends JavaPlugin {
@@ -19,7 +20,7 @@ public class SpawnerPickaxe extends JavaPlugin {
 
 
     public void loadCommands(){
-
+        this.getCommand("xpbottles").setExecutor(new XPBottlesCommand());
     }
 
     public void loadListeners(){
