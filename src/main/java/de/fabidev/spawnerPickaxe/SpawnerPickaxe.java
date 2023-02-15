@@ -27,11 +27,18 @@ public class SpawnerPickaxe extends JavaPlugin {
 
         wahrscheinlichkeit = getConfig().getInt("wahrscheinlichkeit");
         ArrayList<String> lore = new ArrayList<>();
-        lore.add(getConfig().getString("lore1"));
-        lore.add(getConfig().getString("lore2"));
-        lore.add(getConfig().getString("lore3"));
 
-        pu = new PickaxeUtil(Material.getMaterial(getConfig().getString("material")), getConfig().getString("name"), lore);
+        String name = getConfig().getString("name");
+        String lore1 = getConfig().getString("lore1");
+        String lore2 = getConfig().getString("lore2");
+        String lore3 = getConfig().getString("lore3");
+
+
+        lore.add(lore1.replace('&', '§'));
+        lore.add(lore2.replace('&', '§'));
+        lore.add(lore3.replace('&', '§'));
+
+        pu = new PickaxeUtil(Material.getMaterial(getConfig().getString("material")), name.replace('&', '§'), lore);
 
     }
 
@@ -39,11 +46,17 @@ public class SpawnerPickaxe extends JavaPlugin {
         reloadConfig();
         wahrscheinlichkeit = getConfig().getInt("wahrscheinlichkeit");
         ArrayList<String> lore = new ArrayList<>();
-        lore.add(getConfig().getString("lore1"));
-        lore.add(getConfig().getString("lore2"));
-        lore.add(getConfig().getString("lore3"));
 
-        pu = new PickaxeUtil(Material.getMaterial(getConfig().getString("material")), getConfig().getString("name"), lore);
+        String name = getConfig().getString("name");
+        String lore1 = getConfig().getString("lore1");
+        String lore2 = getConfig().getString("lore2");
+        String lore3 = getConfig().getString("lore3");
+
+        lore.add(lore1.replace('&', '§'));
+        lore.add(lore2.replace('&', '§'));
+        lore.add(lore3.replace('&', '§'));
+
+        pu = new PickaxeUtil(Material.getMaterial(getConfig().getString("material")), name.replace('&', '§'), lore);
     }
 
     @Override
